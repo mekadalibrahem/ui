@@ -22,7 +22,7 @@ class UiServiceProvider extends ServiceProvider
           
           }
           
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'ui');
+        $this->loadViewsFrom( __DIR__.'/../stubs/default/resources/views', 'ui');
     }
 }
 
