@@ -1,0 +1,21 @@
+{
+    "name": "mekadalibrahem/ui",
+    "description": "package provide large components for laravel",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mekadalibrahem\\Ui\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mekadalibrahem",
+            "email": "mekadalibrahem123@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "orchestra/testbench": "^9",
+        "phpunit/phpunit": "^10"
+    }
+}
