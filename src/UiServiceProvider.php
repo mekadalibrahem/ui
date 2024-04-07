@@ -1,6 +1,8 @@
 <?php 
 
 namespace Mekadalibrahem\Ui ;
+
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider ;
 
 class UiServiceProvider extends ServiceProvider 
@@ -17,12 +19,12 @@ class UiServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             // Publish views
             $this->publishes([
-                __DIR__.'/../stubs/default/resources/views' => resource_path('views/vendor/ui'),
+                __DIR__.'/../stubs/default/resources/views' => resource_path('views'),
               ], 'views');
           
           }
           
-        $this->loadViewsFrom( __DIR__.'/../stubs/default/resources/views', 'ui');
+        Blade::anonymousComponentPath(__DIR__.'/../stubs/default/resources/views/components' , 'UI');
     }
 }
 
