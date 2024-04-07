@@ -11,6 +11,9 @@ class UiServiceProvider extends ServiceProvider
     }
 
     public function boot(){
+        $this->commands([
+            Console\InstallCommand::class,
+        ]);
         if ($this->app->runningInConsole()) {
             // Publish views
             $this->publishes([

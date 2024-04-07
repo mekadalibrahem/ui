@@ -10,6 +10,7 @@ use Symfony\Component\Process\Process;
 
 class InstallCommand extends Command 
 {
+    use InstallDefaultStack ;
     protected $signature = "ui:install 
         {--composer=global : Absolute path to the Composer binary which should be used to install packages}'";
 
