@@ -17,8 +17,8 @@ class UiServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             // Publish views
             $this->publishes([
-              __DIR__.'/../resources/views' => resource_path('views/vendor/ui'),
-            ], 'views');
+                __DIR__.'/../stubs/default/resources/views' => resource_path('views/vendor/ui'),
+              ], 'views');
           
           }
           
