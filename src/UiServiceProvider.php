@@ -11,7 +11,15 @@ class UiServiceProvider extends ServiceProvider
     }
 
     public function boot(){
-        //
+        if ($this->app->runningInConsole()) {
+            // Publish views
+            $this->publishes([
+              __DIR__.'/../resources/views' => resource_path('views/vendor/ui'),
+            ], 'views');
+          
+          }
+          
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'ui');
     }
 }
 
