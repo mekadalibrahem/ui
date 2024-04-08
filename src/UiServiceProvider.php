@@ -24,7 +24,7 @@ class UiServiceProvider extends ServiceProvider
           
           }
           
-        Blade::anonymousComponentPath(__DIR__.'/../stubs/default/resources/views/components' , 'UI');
+          Blade::anonymousComponentPath(__DIR__.'/../stubs/default/resources/views/components/ui/' , 'ui');
     }
 }
 
